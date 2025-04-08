@@ -1,0 +1,547 @@
+local german_language = {
+    -- Admin things
+    need_admin = "Du brauchst Admin Rechte, um %s zu benutzen.",
+    need_sadmin = "Du brauchst Superadmin Rechte, um %s zu benutzen.",
+    no_privilege = "Du hast nicht die nötigen Rechte, um diese Aktion auszuführen.",
+    no_jail_pos = "Keine Gefängnisposition gesetzt.",
+    invalid_x = "%s ungültig! %s",
+
+    -- F1 menu
+    f1ChatCommandTitle = "Chat Commands",
+    f1Search = "Suche...",
+
+    -- Money things:
+    price = "Preis: %s%d",
+    priceTag = "Preis: %s",
+    reset_money = "%s hat das Geld aller Spieler zurückgesetzt!",
+    has_given = "%s hat dir %s gegeben!",
+    you_gave = "Du hast %s %s gegeben!",
+    npc_killpay = "Du hast %s für das töten eines NPCs bekommen!",
+    profit = "Profit",
+    loss = "Verlust",
+    Donate = "Spenden",
+    you_donated = "Du hast %s an %s gespendet!",
+    has_donated = "%s hat dir %s gespendet!",
+
+    -- backwards compatibility
+    deducted_x = "Abgezogen %s%d",
+    need_x = "Benötigt: %s%d",
+
+    deducted_money = "Abgezogen %s",
+    need_money = "Benötigt: %s",
+
+    payday_message = "Zahltag! Du hast deinen Lohn in Höhe von %s erhalten!",
+    payday_unemployed = "Du hast keinen Lohn erhalten, weil du arbeitslos bist!",
+    payday_missed = "Du hast kein Gehalt erhalten, weil du im Gefängnis sitzt!",
+
+    property_tax = "Grundsteuer! %s",
+    property_tax_cant_afford = "Du konntest die Grundsteuer nicht bezahlen! Dein Grundstück wurde dir weggenommen!",
+    taxday = "Steuertag! %s%% deines Einkommens wurde abgezogen!",
+
+    found_cheque = "Du hast %s%s in einem Scheck bekommen, der von %s ausgestellt wurde.",
+    cheque_details = "Dieser Scheck ist auf %s ausgestellt.",
+    cheque_torn = "Du hast den Scheck zerrissen.",
+    cheque_pay = "%s bezahlen",
+    signed = "Unterschrieben: %s",
+
+    found_cash = "Du hast %s%d aufgehoben!", -- backwards compatibility
+    found_money = "Du hast %s aufgehoben!",
+
+    owner_poor = "Der %s Besitzer ist zu arm, um diesen Verkauf zu subventionieren!",
+
+    -- Police
+    Wanted_text = "Gesucht!",
+    wanted = "Von der Polizei gesucht!\nGrund: %s",
+    youre_arrested = "Du wurdest verhaftet. Verbleibende Zeit: %d Sekunden!",
+    youre_arrested_by = "Du wurdest von %s verhaftet.",
+    youre_unarrested_by = "Du wurdest von %s freigelassen!",
+    hes_arrested = "%s wurde für %d Sekunden verhaftet!",
+    hes_unarrested = "%s wurde aus dem Gefängnis entlassen!",
+    warrant_ordered = "%s hat einen Durchsuchungsbefehl für %s erlassen. Grund: %s",
+    warrant_request = "%s hat einen Durchsuchungsbefehl für %s beantragt.\nGrund: %s",
+    warrant_request2 = "Der Durchsuchungsbefehl wurde an Bürgermeister %s gesendet!",
+    warrant_approved = "Durchsuchungsbefehl für %s genehmigt!\nGrund: %s\nAngeordnet von: %s",
+    warrant_approved2 = "Du kannst das Grundstück jetzt durchsuchen!",
+    warrant_denied = "Der Bürgermeister %s hat deinen Antrag auf einen Durchsuchungsbefehl abgelehnt.",
+    warrant_expired = "Der Durchsuchungsbefehl für %s ist abgelaufen!",
+    warrant_required = "Du brauchst einen Durchsuchungsbefehl, um diese Tür öffnen zu können!",
+    warrant_required_unfreeze = "Du brauchst einen Durchsuchungsbefehl, um diesen Prop unzufreezen.",
+    warrant_required_unweld = "Du brauchst einen Durchsuchungsbefehl, um diesen Prop zu unwelden.",
+    wanted_by_police = "%s wird von der Polizei gesucht!\nGrund: %s\nAngeordnet von: %s",
+    wanted_by_police_print = "%s hat einen Haftbefehl auf %s erlassen, Grund: %s",
+    wanted_expired = "%s wird nicht mehr von der Polizei gesucht.",
+    wanted_revoked = "%s wird nicht mehr von der Polizei gesucht.\nWiderrufen von: %s",
+    cant_arrest_other_cp = "Du kannst andere Polizisten nicht verhaften!",
+    must_be_wanted_for_arrest = "Der Spieler muss gesucht werden, um ihn festnehmen zu können.",
+    cant_arrest_fadmin_jailed = "Du kannst keinen Spieler verhaften, der von einem Admin gejailed wurde.",
+    cant_arrest_no_jail_pos = "Du kannst niemanden verhaften, da es keine Gefängnisplätze gibt!",
+    cant_arrest_spawning_players = "Du kannst Spieler, die spawnen, nicht festnehmen.",
+
+    suspect_doesnt_exist = "Der Verdächtige existiert nicht.",
+    actor_doesnt_exist = "Akteur existiert nicht.",
+    get_a_warrant = "Einen Durchsuchungsbefehl ausstellen",
+    remove_a_warrant = "Einen Durchsuchungsbefehl aufheben",
+    make_someone_wanted = "Haftbefehl ausstellen",
+    remove_wanted_status = "Haftbefehl entfernen",
+    already_a_warrant = "Dieser Spieler hat bereits einen Durchsuchungsbefehl!",
+    not_warranted = "Dieser Spieler hat keinen Durchsuchungsbefehl.",
+    already_wanted = "Dieser Spieler wird bereits gesucht.",
+    not_wanted = "Dieser Spieler wird nicht gesucht.",
+    need_to_be_cp = "Dafür musst du ein Polizist sein!",
+    suspect_must_be_alive_to_do_x = "Dieser Spieler muss für das folgende am leben sein: %s",
+    suspect_already_arrested = "Dieser Spieler ist bereits im Gefängnis.",
+
+    -- Players
+    health = "Gesundheit: %s",
+    job = "Beruf: %s",
+    salary = "Lohn: %s%s",
+    wallet = "Portemonnaie: %s%s",
+    weapon = "Waffe: %s",
+    kills = "Kills: %s",
+    deaths = "Tode: %s",
+    rpname_changed = "%s hat seinen Namen zu %s geändert!",
+    disconnected_player = "Spieler disconnected",
+    player = "spieler",
+
+    -- Teams
+    need_to_be_before = "Du musst erst %s sein, um %s werden zu können!",
+    need_to_make_vote = "Du musst eine Abstimmung starten, um ein %s zu werden!",
+    team_limit_reached = "Du kannst kein %s werden, da das Spielerlimit erreicht ist!",
+    wants_to_be = "%s\nmöchte\n%s werden",
+    has_not_been_made_team = "%s wurde kein %s!",
+    job_has_become = "%s wurde %s!",
+
+    -- Disasters
+    meteor_approaching = "WARNUNG: Meteoritensturm im Anmarsch!",
+    meteor_passing = "Vorbeiziehender Meteoritensturm.",
+    meteor_enabled = "Meteorstürme sind jetzt aktiviert.",
+    meteor_disabled = "Meteorstürme sind jetzt deaktiviert.",
+    earthquake_report = "Erdbeben mit der Stärke %sMw gemeldet!",
+    earthtremor_report = "Erdbeben mit der Stärke %sMw gemeldet!",
+
+    -- Keys, vehicles and doors
+    keys_allowed_to_coown = "Du kannst Miteigentümer sein!\n(Drücke R mit dem Schlüssel in der Hand oder F2)\n",
+    keys_other_allowed = "Miteigentümer:",
+    keys_allow_ownership = "(Drücke R mit dem Schlüssel in der Hand oder drücke F2, um den Besitz zu erlauben)",
+    keys_disallow_ownership = "(Drücke R mit dem Schlüssel in der Hand oder drücke F2, um den Besitz zu verbieten)",
+    keys_owned_by = "Im Besitz von:",
+    keys_unowned = "Kein Besitzer!\n(Drücke R mit dem Schlüssel in der Hand oder drücke F2 zum kaufen)",
+    keys_everyone = "(Drücke R mit dem Schlüssel in der Hand oder drücke F2 um es für jeden zu erlauben)",
+    door_unown_arrested = "Du kannst keine Dinge kaufen oder verkaufen, da du verhaftet bist!",
+    door_unownable = "Diese Tür kann weder gekauft noch 'nicht kaufbar' sein!",
+    door_sold = "Du hast dies für %s verkauft!",
+    door_already_owned = "Diese Tür gehört bereits jemandem!",
+    door_cannot_afford = "Du kannst dir diese Tür nicht leisten!",
+    door_hobo_unable = "Du kannst keine Tür kaufen, wenn du Obdachlos bist!",
+    vehicle_cannot_afford = "Du kannst dir dieses Fahrzeug nicht leisten!",
+    door_bought = "Du hast diese Tür für %s%s gekauft!",
+    vehicle_bought = "Du hast dieses Fahrzeug für %s%s gekauft!",
+    door_need_to_own = "Du musst diese Tür besitzen, um %s nutzen zu können.",
+    door_rem_owners_unownable = "Du kannst keine Besitzer entfernen, wenn eine Tür nicht besitzbar ist!",
+    door_add_owners_unownable = "Du kannst keine Besitzer hinzufügen, wenn eine Tür nicht besitzbar ist!",
+    rp_addowner_already_owns_door = "%s ist bereits Mitbesitzer dieser Tür!",
+    add_owner = "Mitbesitzer hinzufügen",
+    remove_owner = "Mitbesitzer entfernen",
+    coown_x = "%s mitbesitzen",
+    allow_ownership = "Kaufen zulassen",
+    disallow_ownership = "Kaufen verbieten",
+    edit_door_group = "Doorgroups bearbeiten",
+    door_groups = "Door Groups",
+    door_group_doesnt_exist = "Door Group existiert nicht!",
+    door_group_set = "Door Group wurde erfolgreich gesetzt.",
+    sold_x_doors_for_y = "Du hast %d Türen für %s%d verkauft!", -- backwards compatibility
+    sold_x_doors = "Du hast %d Türen für %s verkauft!",
+    no_doors_owned = "Du besitzt keine Türen!",
+
+    -- Entities
+    drugs = "drogen",
+    Drugs = "Drogen",
+    drug_lab = "Drogenlabor",
+    gun_lab = "Waffenlabor",
+    any_lab = "Labor",
+    gun = "Waffe",
+    microwave = "Mikrowelle",
+    food = "essen",
+    Food = "Essen",
+    money_printer = "Gelddrucker",
+    tip_jar = "Spendenglas",
+
+    sign_this_letter = "Unterschreiben",
+    signed_yours = "Dein,",
+
+    money_printer_exploded = "Dein Gelddrucker ist explodiert!",
+    money_printer_overheating = "Dein Gelddrucker ist überhitzt!",
+
+    contents = "Inhalt: ",
+    amount = "Menge: ",
+
+    picking_lock = "Schloss wird geknackt...",
+
+    cannot_pocket_x = "Das kannst du nicht in deine Tasche stecken!",
+    cannot_pocket_gravgunned = "Das kannst du nicht in die Tasche stecken! Da es von einer Gravgun festgehalten wird.",
+    object_too_heavy = "Dieser Gegenstand ist zu schwer!",
+    pocket_full = "Deine Tasche ist voll!",
+    pocket_no_items = "Deine Tasche ist leer!",
+    drop_item = "Item fallenlassen",
+
+    bonus_destroying_entity = "die Zerstörung des illegalen Gegenstands",
+
+    switched_burst = "Umgeschaltet in den Burst Feuermodus.",
+    switched_fully_auto = "Umgeschaltet in den vollautomatischen Feuermodus.",
+    switched_semi_auto = "Umgeschaltet in den halbautomatischen Feuermodus.",
+
+    keypad_checker_shoot_keypad = "Schieße auf ein Keypad, um zu sehen, von was es gesteuert wird.",
+    keypad_checker_shoot_entity = "Schieße auf ein Entity, um zu sehen, welche Keypads mit dem Entity verbunden sind.",
+    keypad_checker_click_to_clear = "Rechtsklick zum Löschen.",
+    keypad_checker_entering_right_pass = "Eingabe des richtigen Passworts",
+    keypad_checker_entering_wrong_pass = "Eingabe des falschen Passworts",
+    keypad_checker_after_right_pass = "nach Eingabe des richtigen Passworts",
+    keypad_checker_after_wrong_pass = "nach Eingabe des falschen Passworts",
+    keypad_checker_right_pass_entered = "Richtiges Passwort eingegeben",
+    keypad_checker_wrong_pass_entered = "Falsches Passwort eingegeben",
+    keypad_checker_controls_x_entities = "Dieses Keypad steuert %d Entities",
+    keypad_checker_controlled_by_x_keypads = "Dieses Entity wird von %d Keypads gesteuert",
+    keypad_on = "AN",
+    keypad_off = "AUS",
+    seconds = "sekunden",
+
+    persons_weapons = "%s's Waffen:",
+    returned_persons_weapons = "Die konfiszierten Waffen von %s zurückgegeben.",
+    no_weapons_confiscated = "%s hat keine Waffen die konfisziert wurden!",
+    no_illegal_weapons = "%s hatte keine Waffen!",
+    confiscated_these_weapons = "Diese Waffen wurden beschlagnahmt:",
+    checking_weapons = "Waffen werden konfisziert...",
+
+    shipment_antispam_wait = "Bitte warte, bevor du ein weiteres Shipment spawnst.",
+    createshipment = "Shipment erstellen",
+    splitshipment = "Shipment teilen",
+    shipment_cannot_split = "Dieses Shipment kann nicht aufgeteilt werden.",
+
+    -- Talking
+    hear_noone = "Niemand kann dich hören %s!",
+    hear_everyone = "Jeder kann dich hören!",
+    hear_certain_persons = "Spieler die dich hören können %s: ",
+
+    whisper = "flüstern",
+    yell = "schreien",
+    broadcast = "[Rundfunk!]",
+    radio = "radio",
+    request = "(ANFRAGE!)",
+    group = "(gruppe)",
+    demote = "(DEMOTE)",
+    ooc = "OOC",
+    radio_x = "Radio %d",
+
+    talk = "reden",
+    speak = "sprechen",
+
+    speak_in_ooc = "schreibe in OOC",
+    perform_your_action = "führe deine Aktion durch",
+    talk_to_your_group = "spreche mit deiner Gruppe",
+
+    channel_set_to_x = "Kanal eingestellt auf %s!",
+    channel = "kanal",
+
+    -- Notifies
+    disabled = "%s wurde deaktiviert! %s",
+    gm_spawnvehicle = "Fahrzeuge spawnen",
+    gm_spawnsent = "Scripted Entities (SENTs) spawnen",
+    gm_spawnnpc = "Non-Player Characters (NPCs) spawnen",
+    see_settings = "Bitte schaue in die DarkRP-Einstellungen.",
+    limit = "Du hast das %s Limit erreicht!",
+    have_to_wait = "Du musst weitere %d Sekunden warten, bevor du %s verwenden kannst!",
+    must_be_looking_at = "Du musst auf einen %s schauen!",
+    incorrect_job = "Du hast nicht den richtigen Job für %s",
+    unavailable = "Dieser %s ist nicht verfügbar",
+    unable = "Du darfst %s nicht tun. %s",
+    cant_afford = "Du kannst dir %s nicht leisten.",
+    created_x = "%s hat %s erstellt",
+    cleaned_up = "Deine %s wurden bereinigt.",
+    you_bought_x = "Du hast %s für %s%d gekauft.", -- backwards compatibility
+    you_bought = "Du hast %s für %s gekauft.",
+    you_got_yourself = "Du hast dir einen %s gekauft.",
+    you_received_x = "Du hast %s für %s erhalten.",
+
+    created_first_jailpos = "Du hast die erste Gefängnisposition erstellt!",
+    added_jailpos = "Du hast eine weitere Gefängnisposition erstellt!",
+    reset_add_jailpos = "Du hast alle Gefängnispositionen entfernt und hier eine neue hinzugefügt.",
+    created_spawnpos = "Du hast eine Spawn-Position für %s hinzugefügt.",
+    updated_spawnpos = "Du hast alle Spawn-Positionen für %s entfernt und hier eine neue hinzugefügt.",
+    remove_spawnpos = "Du hast alle Spawnpositionen für %s entfernt.",
+    do_not_own_ent = "Dir gehört dieses Entity nicht!",
+    cannot_drop_weapon = "Du kannst diese Waffe nicht fallenlassen!",
+    job_switch = "Jobs erfolgreich gewechselt!",
+    job_switch_question = "Möchtest du deinen Job mit %s wechseln?",
+    job_switch_requested = "Jobwechsel angefordert!",
+    switch_jobs = "jobwechsel",
+
+    cooks_only = "Nur Köche.",
+
+    -- Misc
+    unknown = "Unbekannt",
+    arguments = "argumente",
+    no_one = "niemand",
+    door = "tür",
+    vehicle = "fahrzeug",
+    door_or_vehicle = "tür/auto",
+    driver = "Fahrer: %s",
+    name = "Name: %s",
+    locked = "Abgeschlossen.",
+    unlocked = "Offen.",
+    player_doesnt_exist = "Der Spieler existiert nicht.",
+    job_doesnt_exist = "Dieser Beruf existiert nicht!",
+    must_be_alive_to_do_x = "Du musst für das folgende am Leben sein: %s.",
+    banned_or_demoted = "Gebannt/demoted",
+    wait_with_that = "Warte damit.",
+    could_not_find = "%s konnte nicht gefunden werden",
+    f3tovote = "Drücke F3 zum Abstimmen",
+    listen_up = "Hört zu:", -- In rp_tell or rp_tellall
+    nlr = "NLR: Nach dem Tot, nicht aus Rache verhaften oder töten.",
+    reset_settings = "Du hast alle Einstellungen zurückgesetzt!",
+    must_be_x = "Du musst ein %s sein, um %s machen zu können.",
+    agenda = "agenda",
+    agenda_updated = "Die Agenda wurde aktualisiert!",
+    job_set = "%s hat seinen Beruf zum '%s' gewechselt",
+    demote_vote = "demote",
+    demoted = "%s wurde demoted!",
+    demoted_not = "%s wurde nicht demoted!",
+    demote_vote_started = "%s hat eine Abstimmung gestartet, um %s zu demoten",
+    demote_vote_text = "Spieler:\n%s", -- '%s' is the reason here
+    cant_demote_self = "Du kannst dich nicht selber demoten.",
+    i_want_to_demote_you = "Ich möchte dich demoten. Grund: %s",
+    tried_to_avoid_demotion = "Du hast versucht, dem Demote zu entgehen. Du hast versagt und bist degradiert worden.", -- naughty boy!
+    lockdown_started = "Der Bürgermeister hat einen Lockdown veranlasst, bitte geht in eure Häuser!",
+    lockdown_ended = "Der Lockdown ist beendet",
+    gunlicense_requested = "%s hat %s eine Waffenlizenz beantragt",
+    gunlicense_granted = "%s hat %s eine Waffenlizenz erteilt",
+    gunlicense_denied = "%s hat %s eine Waffenlizenz verweigert",
+    gunlicense_question_text = "%s eine Waffenlizenz geben?",
+    gunlicense_remove_vote_text = "%s hat eine Abstimmung über den Entzug der Waffenlizenz von %s gestartet",
+    gunlicense_remove_vote_text2 = "Waffenlizenz widerrufen:\n%s", -- Where %s is the reason
+    gunlicense_removed = "Die Waffenlizenz von %s wurde widerrufen!",
+    gunlicense_not_removed = "%s's Waffenlizenz wurde nicht widerrufen!",
+    vote_specify_reason = "Du musst einen Grund angeben!",
+    vote_started = "Die Abstimmung wurde gestartet!",
+    vote_alone = "Du hast die Abstimmung gewonnen, da du allein auf dem Server bist.",
+    you_cannot_vote = "Du kannst nicht abstimmen!",
+    x_cancelled_vote = "%s hat die letzte Abstimmung abgebrochen.",
+    cant_cancel_vote = "Die letzte Abstimmung konnte nicht abgebrochen werden, da es keine letzte Abstimmung zum Abbrechen gab!",
+    jail_punishment = "Strafe fürs Disconnecten! Du wurdest für %d Sekunden gejailed.",
+    admin_only = "Das können nur Administratoren!", -- When doing /addjailpos
+    chief_or = "Polizeichef oder ",-- When doing /addjailpos
+    frozen = "Gefroren.",
+    recipient = "empfänger",
+    forbidden_name = "Verbotener Name.",
+    illegal_characters = "Unzulässige Zeichen.",
+    too_long = "Zu lang.",
+    too_short = "Zu kurz.",
+
+    dead_in_jail = "Du bist jetzt tot, bis deine Zeit im Gefängnis abgelaufen ist!",
+    died_in_jail = "%s ist im Gefängnis gestorben!",
+
+    credits_for = "CREDITS FÜR %s\n",
+    credits_see_console = "Die DarkRP-Credits wurden in deine Konsole geschrieben.",
+
+    rp_getvehicles = "Verfügbare Fahrzeuge für Custom Fahrzeuge:",
+
+    data_not_loaded_one = "Deine Daten wurden noch nicht geladen. Bitte warte.",
+    data_not_loaded_two = "Wenn das Problem weiterhin besteht, versuche, neuzujoinen oder einen Administrator zu kontaktieren.",
+
+    cant_spawn_weapons = "Du kannst keine Waffen spawnen.",
+    drive_disabled = "Das fahren ist vorerst deaktiviert.",
+    property_disabled = "Die Immobilie ist vorerst deaktiviert.",
+
+    not_allowed_to_purchase = "Du bist nicht berechtigt, dieses Item zu kaufen.",
+
+    rp_teamban_hint = "rp_teamban [Spielername/ID] [Jobname/id]. Verwende dies, um einen Spieler aus einem bestimmten Job zu verbannen.",
+    rp_teamunban_hint = "rp_teamunban [Spielername/ID] [Jobname/id]. Verwende dies, um einen Spieler aus einem bestimmten Job zu entbannen.",
+    x_teambanned_y_for_z = "%s hat %s vom Beruf %s für %s Minuten gebannt.",
+    x_teamunbanned_y = "%s hat den Job Ban von %s als %s aufgehoben.",
+
+    -- Backwards compatibility:
+    you_set_x_salary_to_y = "Du hast das Gehalt von %s auf %s%d gesetzt.",
+    x_set_your_salary_to_y = "%s hat dein Gehalt auf %s%d gesetzt.",
+    you_set_x_money_to_y = "Du hast das Geld von %s auf %s%d gesetzt.",
+    x_set_your_money_to_y = "%s hat dein Geld auf %s%d gesetzt.",
+
+    you_set_x_salary = "Du hast das Gehalt von %s auf %s gesetzt.",
+    x_set_your_salary = "%s hat dein Gehalt auf %s gesetzt.",
+    you_set_x_money = "Du hast das Geld von %s auf %s gesetzt.",
+    x_set_your_money = "%s hat dein Geld auf %s gesetzt.",
+    you_set_x_name = "Du hast den Namen von %s auf %s gesetzt.",
+    x_set_your_name = "%s hat deinen Namen auf %s gesetzt.",    
+
+    someone_stole_steam_name = "Jemand benutzt bereits deinen Steam-Namen als RP-Namen, also haben wir eine '1' an deinen Namen angehängt.",
+    already_taken = "Bereits vergeben.",    
+
+    job_doesnt_require_vote_currently = "Dieser Job erfordert momentan keine Abstimmung!",
+
+    x_made_you_a_y = "%s hat dich zu einem %s gemacht!",
+
+    cmd_cant_be_run_server_console = "Dieser Befehl kann nicht über die Serverkonsole ausgeführt werden.",
+
+    -- The lottery
+    lottery_started = "Eine Lotterie wurde gestartet! Möchtest du für %s%d mitmachen?",
+    lottery_has_started = "Eine Lotterie wurde gestartet! Möchtest du für %s mitmachen?",
+    lottery_entered = "Du hast an der Lotterie für %s teilgenommen!",
+    lottery_not_entered = "%s hat nicht an der Lotterie teilgenommen.",
+    lottery_noone_entered = "Niemand hat an der Lotterie teilgenommen.",
+    lottery_won = "%s hat die Lotterie gewonnen! Er hat %s gewonnen!",
+    lottery = "Lotterie",
+    lottery_please_specify_an_entry_cost = "Bitte gib einen Teilnahmebetrag an (%s–%s)",
+    too_few_players_for_lottery = "Es sind zu wenige Spieler online, um eine Lotterie zu starten. Es müssen mindestens %d Spieler Online sein.",
+    lottery_ongoing = "Es kann keine neue Lotterie gestartet werden, da bereits eine läuft!",    
+
+    -- Animations
+    custom_animation = "Benutzerdefinierte Animation!",
+    bow = "Verbeugen",
+    sexy_dance = "Sexy Tanz",
+    follow_me = "Folge mir!",
+    laugh = "Lachen",
+    lion_pose = "Löwenpose",
+    nonverbal_no = "Nonverbales Nein",
+    thumbs_up = "Daumen hoch",
+    wave = "Winken",
+    dance = "Tanzen",
+
+    -- Hungermod
+    starving = "Du verhungerst!",
+
+    -- AFK
+    afk_mode = "AFK-Modus",
+    unable_afk_spam_prevention = "Bitte warte, bevor du erneut in den AFK-Modus gehst.",
+    salary_frozen = "Du erhältst jetzt kein Gehalt mehr.",
+    salary_restored = "Willkommen zurück, du erhältst jetzt wieder Gehalt.",
+    no_auto_demote = "Du wirst nicht automatisch degradiert.",
+    youre_afk_demoted = "Du wurdest degradiert weil du zu lange AFK warst. Benutze das nächste Mal /afk.",
+    hes_afk_demoted = "%s wurde degradiert, weil er zu lange AFK war.",
+    afk_cmd_to_exit = "Gib /afk ein, um den AFK-Modus zu verlassen.",
+    player_now_afk = "%s ist jetzt AFK.",
+    player_no_longer_afk = "%s ist jetzt nicht mehr AFK.",
+
+    -- Hitmenu
+    hit = "Auftrag",
+    hitman = "Auftragskiller",
+    current_hit = "Aktueller Auftrag: %s",
+    cannot_request_hit = "Du kannst keinen Auftrag anfragen! %s",
+    hitmenu_request = "Anfragen",
+    player_not_hitman = "Dieser Spieler ist kein Auftragskiller!",
+    distance_too_big = "Die Entfernung ist zu groß.",
+    hitman_no_suicide = "Ein Auftragskiller würde sich nicht selber umbringen.",
+    hitman_no_self_order = "Ein Auftragskiller kann keinen Auftrag auf sich selbst ausstellen.",
+    hitman_already_has_hit = "Der Auftragskiller hat bereits einen laufenden Auftrag.",
+    price_too_low = "Der Preis ist zu niedrig!",
+    hit_target_recently_killed_by_hit = "Das Ziel wurde vor Kurzem schon durch einen Auftragskiller getötet.",
+    customer_recently_bought_hit = "Du hast vor Kurzem schon einen Auftrag erteilt. Warte bis du wieder einen Auftrag aufgeben kannst.",
+    accept_hit_question = "Auftrag von %s annehmen\nZiel: %s Bezahlung: %s%d?",
+    accept_hit_request = "Auftrag von %s annehmen\nZiel: %s Bezahlung: %s?",
+    hit_requested = "Auftrag angefragt!",
+    hit_aborted = "Auftrag abgebrochen! %s",
+    hit_accepted = "Auftrag angenommen!",
+    hit_declined = "Der Auftragskiller hat den Auftrag abgelehnt!",
+    hitman_left_server = "Der Auftragskiller hat den Server verlassen!",
+    customer_left_server = "Der Kunde hat den Server verlassen!",
+    target_left_server = "Das Ziel hat den Server verlassen!",
+    hit_price_set_to_x = "Auftragspreis auf %s%d gesetzt.",
+    hit_price_set = "Auftragspreis auf %s gesetzt.",
+    hit_complete = "Auftrag von %s abgeschlossen!",
+    hitman_died = "Der Auftragskiller ist gestorben!",
+    target_died = "Das Ziel ist gestorben!",
+    hitman_arrested = "Der Auftragskiller wurde verhaftet!",
+    hitman_changed_team = "Der Auftragskiller hat seinen Beruf gewechselt!",
+    x_had_hit_ordered_by_y = "%s hatte einen Auftrag, der von %s beauftragt wurde.",
+    place_a_hit = "Einen Auftrag aufgeben!",
+    hit_cancel = "Auftrag abbrechen!",
+    hit_cancelled = "Der Auftrag wurde abgebrochen!",
+    no_active_hit = "Du hast keinen aktiven Auftrag!",
+
+    -- Vote Restrictions
+    hobos_no_rights = "Obdachlose haben kein Wahlrecht!",
+    gangsters_cant_vote_for_government = "Gangster dürfen nicht über Regierungssachen abstimmen!",
+    government_cant_vote_for_gangsters = "Regierungsmitglieder dürfen nicht über Gangstersachen abstimmen!",
+
+    -- VGUI and some more doors/vehicles
+    vote = "Abstimmung",
+    time = "Zeit: %d",
+    yes = "Ja",
+    no = "Nein",
+    ok = "Okay",
+    cancel = "Abbrechen",
+    add = "Hinzufügen",
+    remove = "Entfernen",
+    none = "Keiner",
+
+    x_options = "%s Optionen",
+    sell_x = "%s verkaufen",
+    set_x_title = "Setze %s Titel",
+    set_x_title_long = "Setze den Titel von dem %s, das du dir gerade ansiehst.",
+    jobs = "Berufe",
+    buy_x = "Kaufe %s",
+
+    -- F4menu
+    ammo = "Munition",
+    weapon_ = "Waffe",
+    no_extra_weapons = "Dieser Beruf hat keine zusätzlichen Waffen.",
+    become_job = "Job annehmen",
+    create_vote_for_job = "Abstimmung starten",
+    shipment = "Shipment",
+    Shipments = "Shipments",
+    shipments = "shipments",
+    F4guns = "Waffen",
+    F4entities = "Sonstiges",
+    F4ammo = "Munition",
+    F4vehicles = "Fahrzeuge",
+
+    -- Tab 1
+    give_money = "Geld geben",
+    drop_money = "Geld fallenlassen",
+    change_name = "RP Namen ändern",
+    go_to_sleep = "Schlafen gehen",
+    drop_weapon = "Aktuelle Waffe fallenlassen",
+    buy_health = "Gesundheit kaufen (%s)",
+    request_gunlicense = "Waffenschein beantragen",
+    demote_player_menu = "Spieler degradieren",
+
+    searchwarrantbutton = "Spieler suchen",
+    unwarrantbutton = "Gesuchtenstatus entfernen",
+    noone_available = "Niemand verfügbar",
+    request_warrant = "Durchsuchungsbefehl anfordern",
+    make_wanted = "Spieler gesucht melden",
+    make_unwanted = "Spieler nicht mehr gesucht melden",
+    set_jailpos = "Gefängnisposition setzen",
+    add_jailpos = "Gefängnisposition hinzufügen",
+
+    set_custom_job = "Custom Job setzen (Enter zum Aktivieren)",
+
+    set_agenda = "Agenda setzen (Enter zum Aktivieren)",
+
+    initiate_lockdown = "Lockdown starten",
+    stop_lockdown = "Lockdown stoppen",
+    start_lottery = "Lotterie starten",
+    give_license_lookingat = "Waffenschein ausstellen",
+
+    laws_of_the_land = "GESETZE DES LANDES",
+    law_added = "Gesetz hinzugefügt.",
+    law_removed = "Gesetz entfernt.",
+    law_reset = "Gesetze zurückgesetzt.",
+    law_too_short = "Gesetz zu kurz.",
+    laws_full = "Gesetze sind voll.",
+    default_law_change_denied = "Du darfst die Standardgesetze nicht ändern.",
+
+    -- Second tab
+    job_name = "Name: ",
+    job_description = "Beschreibung: ",
+    job_weapons = "Waffen: ",
+
+    -- Entities tab
+    buy_a = "Kaufe %s: %s",
+
+    -- Licenseweaponstab
+    license_tab = [[Waffenlizenz
+
+    Wähle die Waffen, die man OHNE Lizenz bekommen kann!
+    ]],
+    license_tab_other_weapons = "Andere Waffen:",
+}
+
+DarkRP.addLanguage("de", german_language) -- Made by Atomic Networks - Server Director - Marius
