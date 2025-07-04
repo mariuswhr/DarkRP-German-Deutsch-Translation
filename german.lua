@@ -544,4 +544,4 @@ local german_language = {
     license_tab_other_weapons = "Andere Waffen:",
 }
 
-DarkRP.addLanguage("de", german_language) -- Made by Atomic Networks - Server Director - Marius
+DarkRP.addLanguage("de", german_language) -- Made by Kobralost Roleplay Germany - Server Director - Marius
